@@ -139,10 +139,14 @@ console.log(newBaby);
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. "Window/Global Object Binding" 
+      When "this" is used in the global scope, it is set to the value of the window or the console object.
+  2. "Implicit Binding"
+      Whenever an object calls a method within itself, and that method uses "this". The "this" keyword is set to the value of the object that called that method.
+  3. "New binding"
+      During the creation of a constructor function, using "this" in the functions can apply properties and methods to the constructor functions. By using the "new" keyword to create an object with the constructor function, an instance of an object is created that uses all of the properties and methods that has been defined in the constructor function.
+  4. "Explicit Binding"
+      When an object is created through a constructor function, the "this" keyword from that object's instance can be overwritten using the ".call" and ".apply" methods. If there is an object named "student" that has the set property of "this.name = 'Jose'" with a method that returns that value, another object can binded to the "this" keyword in "student" with "student.returnName.call(anotherObject)". If that "student" variable now runs the method "returnName" it returns the name of the object with the variable name of "anotherObject".
 */
 
 ///////// END OF CHALLENGE /////////
